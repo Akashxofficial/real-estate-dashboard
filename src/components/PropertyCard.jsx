@@ -42,7 +42,7 @@ const PropertyCard = ({ name, location, status, image, rating, link, compact }) 
       <Box
         sx={{
           position: "relative",
-          height: compact ? 150 : 200, // 👈 height reduction only if compact is true
+          height: compact ? 150 : 200, 
           overflow: "hidden",
         }}
       >
@@ -81,14 +81,14 @@ const PropertyCard = ({ name, location, status, image, rating, link, compact }) 
         <CheckCircleIcon
           sx={{
             position: "absolute",
-            top: compact ? 165 : 195, // adjust tick position for shorter card
-            right: 10,
+            top: compact ? 165 : 200, 
+            right: 5,
             color: "#3B82F6",
             backgroundColor: "#fff",
             borderRadius: "50%",
             fontSize: 25,
-            padding: "1px",
-            boxShadow: 1,
+            padding: "10px",
+            boxShadow: 0,
           }}
         />
       )}

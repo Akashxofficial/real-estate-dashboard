@@ -37,7 +37,7 @@ function Dashboard() {
       <Sidebar />
       <Box flexGrow={1} px={5} py={1} bgcolor="#f9f9f9" height="100vh">
         <Topbar />
-        <Typography variant="h6" fontWeight="bold" mb={2}>Your Properties</Typography>
+        <Typography variant="h6" fontWeight="bold" mb={4}>Your Properties</Typography>
         <Box display="flex" gap={3} mt={2}>
           {properties.map((prop) => (
             <PropertyCard key={prop.id} {...prop} />

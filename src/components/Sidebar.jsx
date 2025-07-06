@@ -18,7 +18,7 @@ function Sidebar() {
       flexDirection="column"
       justifyContent="space-between"
     >
-      <Box mt={15}> {/* adjusted lower to match Figma */}
+      <Box mt={15}> { }
         <List>
           <ListItem button selected sx={{ backgroundColor: "#e6f4ea", borderRadius: 2, mb: 1 }}>
             <ListItemIcon><DashboardIcon /></ListItemIcon>

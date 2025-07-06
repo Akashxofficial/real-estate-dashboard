@@ -93,8 +93,8 @@ const AddProperty = () => {
             src={property.image}
             alt={property.title}
             style={{
-              width: "420px",  // bigger width
-              height: "250px", // proportional height
+              width: "420px",  
+              height: "250px", 
               objectFit: "cover",
               borderRadius: "16px"
             }}
