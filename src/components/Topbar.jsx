@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   TextField,
@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 const Topbar = () => {
   const navigate = useNavigate();
+  const [searchText, setSearchText] = useState("");
 
   return (
     <Box
@@ -41,11 +42,10 @@ const Topbar = () => {
           display: "flex",
           alignItems: "center",
           "&:hover": {
-            backgroundColor: "#e5e7eb"
+            backgroundColor: "#e5e7eb",
           },
         }}
       >
-        {/* Icons group: 📍 then + */}
         <Box display="flex" alignItems="center" mr={0.5}>
           <LocationOnOutlinedIcon sx={{ fontSize: 22, ml: -0.5 }} />
           <AddIcon sx={{ fontSize: 15, ml: -0.7 }} />
@@ -58,6 +58,8 @@ const Topbar = () => {
         placeholder="Search"
         variant="outlined"
         size="small"
+        value={searchText}
+        onChange={(e) => setSearchText(e.target.value)}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -72,15 +74,18 @@ const Topbar = () => {
           "& .MuiOutlinedInput-root": {
             borderRadius: "999px",
             fontSize: "14px",
+            backgroundColor: "#f3f4f6",
             "& fieldset": {
-              borderColor: "transparent",
+              borderColor: "transparent !important",
             },
             "&:hover fieldset": {
-              borderColor: "transparent",
+              borderColor: "transparent !important",
+            },
+            "&.Mui-focused": {
+              backgroundColor: "#f3f4f6 !important",
             },
             "&.Mui-focused fieldset": {
-              borderColor: "#60a5fa",
-              backgroundColor: "#fff",
+              borderColor: "transparent !important",
             },
           },
         }}
